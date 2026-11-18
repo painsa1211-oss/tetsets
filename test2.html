@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RESUME</title>
+<style>
+  :root { --line:#555; --label:#e9edf2; --guide:#1f4fd8; --hl:#fff3b0; }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:20px; background:#e6e8eb; font-family:"Malgun Gothic","맑은 고딕",sans-serif; font-size:13px; line-height:1.6; color:#111; }
+  .toolbar { max-width:794px; margin:0 auto 10px; text-align:right; }
+  .toolbar button { padding:6px 12px; margin-left:6px; border:1px solid #888; background:#fff; cursor:pointer; border-radius:4px; }
+  .page { width:794px; max-width:100%; margin:0 auto; background:#fff; padding:44px 52px; box-shadow:0 2px 10px rgba(0,0,0,.2); }
+
+  .head { display:flex; gap:20px; align-items:stretch; margin-bottom:16px; }
+  .photo { width:113px; height:151px; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; text-align:center; color:#888; font-size:12px; flex:none; overflow:hidden; }
+  .photo img { width:100%; height:100%; object-fit:cover; }
+  .head-right { flex:1; display:flex; flex-direction:column; }
+  .head-right h1 { font-size:34px; letter-spacing:6px; margin:0 0 10px; text-align:right; }
+
+  h2 { font-size:15px; margin:22px 0 4px; }
+  h2::before { content:"■ "; font-size:11px; }
+  .guide { color:var(--guide); font-size:11.5px; margin:0 0 6px; }
+  .guide.sec { font-weight:normal; }
+
+  table { width:100%; border-collapse:collapse; margin-bottom:4px; }
+  th, td { border:1px solid var(--line); padding:5px 8px; vertical-align:middle; text-align:left; }
+  th { background:var(--label); font-weight:bold; text-align:center; white-space:nowrap; }
+  td.c, th.c { text-align:center; }
+  .head-right table { flex:1; }
+  .head-right th { width:110px; }
+
+  ol.core, ul.plain { margin:4px 0 4px 0; padding-left:22px; }
+  ol.core li { margin-bottom:6px; }
+  ul.plain { list-style:none; padding-left:6px; } ul.plain li::before { content:"- "; }
+
+  .career { border:1px solid var(--line); padding:12px 16px; margin-top:6px; }
+  .career + .career { margin-top:12px; }
+  .career .t { font-weight:bold; font-size:14px; border-bottom:1px solid #999; padding-bottom:4px; margin-bottom:6px; }
+  .career .sub { font-weight:bold; margin-top:8px; }
+  .career ul { margin:2px 0 4px; padding-left:20px; }
+  .career .out { color:#a02020; font-weight:bold; margin-top:4px; }
+
+  .essay { border:1px solid var(--line); padding:10px 14px; min-height:90px; margin-bottom:6px; }
+  .essay p { margin:0 0 8px; }
+  .confirm { text-align:center; margin-top:34px; font-weight:bold; }
+  .sign { text-align:right; margin-top:16px; line-height:2.2; }
+
+  .todo { background:var(--hl); padding:0 2px; border-radius:2px; }
+  body.no-guide .guide { display:none; }
+  [contenteditable]:focus { outline:2px solid #8ab4ff; }
+
+  @media print {
+    @page { size:A4; margin:12mm; }
+    body { background:#fff; padding:0; }
+    .toolbar { display:none; }
+    .page { box-shadow:none; padding:0; width:auto; }
+    .todo { background:none; }
+    .career, table, .essay { page-break-inside:avoid; }
+  }
+  @media (max-width:640px) { .page { padding:20px 14px; } .head { flex-direction:column; } }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button onclick="document.body.classList.toggle('no-guide')">파란 안내문구 숨기기/보이기</button>
+  <button onclick="window.print()">인쇄 / PDF 저장</button>
+</div>
+
+<div class="page" contenteditable="true">
+
+  <!-- 헤더 -->
+  <div class="head">
+    <div class="photo" contenteditable="false">사진첨부</div>
+    <div class="head-right">
+      <h1>RESUME</h1>
+      <table>
+        <tr><th>지원자성명</th><td><span class="todo">[이름]</span></td></tr>
+        <tr><th>지원회사</th><td><span class="todo">[지원 회사]</span></td></tr>
+        <tr><th>지원포지션</th><td><span class="todo">[지원 포지션]</span></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 기초정보 -->
+  <h2>기초정보</h2>
+  <table>
+    <tr><th>입사가능일</th><td>최종합격 이후 협의</td><th>총 경력연수</th><td><span class="todo">[ ]년 [ ]개월</span></td></tr>
+    <tr><th>최종연봉</th><td colspan="3">총 수령액: <span class="todo">[ ]</span>만원 (원천징수 및 급여명세서로 확인 가능한 금액 기재)<br>
+      수령액 상세구분 내역: 기본급 <span class="todo">[ ]</span>원 + 수당 <span class="todo">[ ]</span>원 + 인센티브 <span class="todo">[ ]</span>원 + 기타 <span class="todo">[ ]</span></td></tr>
+    <tr><th>성별</th><td><span class="todo">[ ]</span></td><th>생년월일</th><td><span class="todo">[0000년 00월 00일]</span></td></tr>
+    <tr><th>현주소</th><td colspan="3"><span class="todo">[ ]</span></td></tr>
+    <tr><th>병역사항</th><td colspan="3"><span class="todo">[0000년 00월 ~ 0000년 00월 (군필/미필/면제)]</span> (면제사유: )</td></tr>
+    <tr><th>연락처</th><td><span class="todo">[010-0000-0000]</span></td><th>E-Mail</th><td><span class="todo">[ ]</span></td></tr>
+    <tr><th>장애(등급)</th><td></td><th>보훈 대상여부</th><td></td></tr>
+  </table>
+  <div class="guide">** 연봉 → 증빙자료가 요청되니, 정확한 금액을 적어주시기 바랍니다.</div>
+
+  <!-- 학력사항 -->
+  <h2>학력사항</h2>
+  <div class="guide">(필수기재사항: 재학기간, 학교명, 소재지, 학과, 학위취득여부)</div>
+  <table>
+    <tr><th>구분</th><th>재학기간</th><th>학교명</th><th>소재지</th><th>학과</th><th>상태*</th></tr>
+    <tr><th>대학원</th><td class="c"></td><td></td><td></td><td></td><td></td></tr>
+    <tr><th>대학교</th><td class="c"><span class="todo">[00년00월~00년00월]</span></td><td><span class="todo">[ ]</span></td><td><span class="todo">[ ]</span></td><td><span class="todo">[ ]</span></td><td class="c"><span class="todo">[졸업]</span></td></tr>
+    <tr><th>고등학교</th><td class="c"></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <div class="guide">* 상태: 편입/졸업/중퇴/재학 등 &nbsp; * 학위논문 있을 시 게재 요망</div>
+
+  <!-- 경력요약 -->
+  <h2>경력요약</h2>
+  <div class="guide">(필수기재사항: 재직기간, 기업명, 부서명, 직위, 근로형태, 주요업무)</div>
+  <table>
+    <tr><th>재직기간</th><th>기업명</th><th>부서명/직위</th><th>주요업무</th></tr>
+    <tr>
+      <td class="c"><span class="todo">[00년00월 ~ 현재]</span></td>
+      <td><span class="todo">[현재 회사명]</span></td>
+      <td>IT운영팀 / <span class="todo">[직위]</span></td>
+      <td>파트너포탈·전자계약/입찰·그룹웨어·SSO 운영/개선, SmartOps 개발환경 구축</td>
+    </tr>
+    <tr>
+      <td class="c"><span class="todo">[00년00월 ~ 00년00월]</span></td>
+      <td><span class="todo">[이전 회사명]</span></td>
+      <td><span class="todo">[ ]</span></td>
+      <td><span class="todo">[ ]</span></td>
+    </tr>
+    <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
+  </table>
+
+  <!-- 핵심역량 -->
+  <h2>핵심역량</h2>
+  <div class="guide">- 본인의 핵심능력을 요약해서 작성해주시기 바랍니다.</div>
+  <ol class="core">
+    <li><b>기업 웹시스템 운영·유지보수</b> – 파트너포탈, 전자계약/입찰, 그룹웨어, SSO 등 사내외 핵심 시스템의 안정 운영과 지속적인 기능 개선 경험</li>
+    <li><b>장애 분석 및 원인 추적</b> – WAS 에러 로그·배치 로그를 분석해 장애 원인을 파악하고, 파일첨부·특수문자 오류 등 반복 이슈를 근본 해결</li>
+    <li><b>요구사항 정의 및 테스트 관리</b> – 요구사항정의서, 화면 컨셉, 테스트 내역서, 권한 세팅 데이터 등 산출물 작성과 개선 의뢰 기준 수립으로 현업–개발 간 소통 체계화</li>
+    <li><b>최신 개발환경·클라우드 이해</b> – .NET / React 기반 SmartOps 서비스의 로컬 개발환경 구축, AWS SSO·Secrets Manager·RDS(PostgreSQL) 연동 및 가이드 문서화</li>
+  </ol>
+
+  <!-- 외국어 -->
+  <h2>외국어능력</h2>
+  <div class="guide">– 공인점수 있을 때는 작성해주시고 회화/독해/작문능력을 상/중/하로 표기</div>
+  <ul class="plain">
+    <li>영어: <span class="todo">[TOEIC 000점 (0000년 00월), 회화(상) / 독해(중) / 작문(하)]</span></li>
+    <li>일어</li>
+    <li>중국어</li>
+  </ul>
+
+  <!-- 자격/면허 -->
+  <h2>자격/면허사항</h2>
+  <div class="guide">– 공인자격 및 면허를 취득일 / 취득자격증명 / 발행기관 순으로 작성바랍니다.</div>
+  <ul class="plain">
+    <li><span class="todo">[0000.00 정보처리기사 한국산업인력공단]</span></li>
+  </ul>
+
+  <h2>컴퓨터활용능력</h2>
+  <ul class="plain">
+    <li>개발/운영: <span class="todo">[Java, .NET, React, SQL(PostgreSQL), AWS, Azure DevOps, GitHub, Swagger/Postman 등 실제 사용 기술]</span></li>
+    <li>문서: MS Office (Excel / Word / PowerPoint) <span class="todo">[수준]</span></li>
+  </ul>
+
+  <h2>교육 및 수상내역</h2>
+  <div class="guide">(일시(기간), 주관기관, 상세내역 – 해당자만 기술)</div>
+  <ul class="plain"><li></li></ul>
+
+  <h2>해외출장 및 연수</h2>
+  <div class="guide">(기간, 국가, 상세내역 – 해당자만 기술)</div>
+  <ul class="plain"><li></li></ul>
+
+  <!-- 상세 주요경력 -->
+  <h2 style="page-break-before:always">상세 주요경력</h2>
+  <div class="guide">(필수기재사항: 최근연도순으로 근무기간, 근무회사개요(소재지/매출/인원/제품/거래처 등), 근무부서 및 직급, 담당업무, 취급제품, 업무성과 등을 구체적으로 기재해주시기 바랍니다.)</div>
+
+  <div class="career">
+    <div class="t"><span class="todo">[0000.00 ~ 현재]</span> <span class="todo">[현재 회사명]</span> IT운영팀 / <span class="todo">[직위]</span> / 연봉 <span class="todo">[ ]</span>만원</div>
+    <div><b>회사소개:</b> <span class="todo">[소재지 / 매출 / 인원 / 주요 제품·사업 / 주요 거래처]</span></div>
+
+    <div class="sub">&lt;상세 주요업무/프로젝트&gt;</div>
+
+    <div class="sub">파트너포탈 운영·개선 <span class="todo">(0000년00월 ~ 0000년00월)</span></div>
+    <ul>
+      <li>서비스부품 반품 로직 구축 및 개발 화면 컨셉 설계</li>
+      <li>파일첨부·특수문자 오류, 단납 패널티 등 오류 수정 및 테스트 내역서 작성</li>
+    </ul>
+    <div class="out">[주요성과]</div>
+    <ul>
+      <li>2026.10 오류 수정 및 테스트(12일간) 수행, 테스트 내역서로 배포 품질 확보</li>
+      <li><span class="todo">[장애 건수 감소 / 처리시간 단축 등 정량 성과]</span></li>
+    </ul>
+
+    <div class="sub">전자계약·입찰 시스템 및 배치 관리 <span class="todo">(0000년00월 ~ 0000년00월)</span></div>
+    <ul>
+      <li>배치 리스트 정비 및 스케줄 모니터링, WAS 에러 로그 분석을 통한 장애 원인 추적</li>
+    </ul>
+    <div class="out">[주요성과]</div>
+    <ul><li><span class="todo">[ ]</span></li></ul>
+
+    <div class="sub">그룹웨어 기능 개선 <span class="todo">(0000년00월 ~ 0000년00월)</span></div>
+    <ul>
+      <li>차량 인수인계증 사번 추가 요구사항 정의, 전자결재·인감관리 메뉴 정비</li>
+      <li>뮬(모바일) 전환 사용 현황 관리</li>
+    </ul>
+    <div class="out">[주요성과]</div>
+    <ul><li>개선 의뢰 기준표 정립으로 요청 접수·우선순위 판단 프로세스 표준화</li></ul>
+
+    <div class="sub">SSO 시스템 유지보수 <span class="todo">(0000년00월 ~ 0000년00월)</span></div>
+    <ul>
+      <li>연간 유지보수 계약 및 운영 이슈 대응, 프로그램 권한 세팅 데이터 관리</li>
+    </ul>
+
+    <div class="sub">SmartOps 서비스 개발환경 구축 <span class="todo">(0000년00월 ~ 0000년00월)</span></div>
+    <ul>
+      <li>.NET 백엔드 / React 프론트엔드 로컬 셋업 가이드 작성 (GitHub, Azure DevOps NuGet, AWS SSO, VPN 접근 체크리스트 포함)</li>
+    </ul>
+    <div class="out">[주요성과]</div>
+    <ul><li>신규 투입 인력의 환경 구축 시간 단축 <span class="todo">[예: 2일 → 반나절]</span></li></ul>
+
+    <div class="sub">취급제품/기술</div>
+    <ul><li>Java/WAS 기반 웹시스템, .NET, React, PostgreSQL, AWS(SSO·Secrets Manager·SSM), Azure DevOps, GitHub <span class="todo">[실제 사용 기술로 수정]</span></li></ul>
+
+    <div class="sub">퇴사사유: <span style="font-weight:normal">재직 중</span></div>
+  </div>
+
+  <div class="career">
+    <div class="t"><span class="todo">[0000.00 ~ 0000.00]</span> <span class="todo">[이전 회사명]</span> <span class="todo">[부서]</span> / <span class="todo">[직위]</span> / 연봉 <span class="todo">[ ]</span>만원</div>
+    <div><b>회사소개:</b> <span class="todo">[ ]</span></div>
+    <div class="sub">&lt;상세 주요업무/프로젝트&gt;</div>
+    <ul><li><span class="todo">[ ]</span></li></ul>
+    <div class="out">[주요성과]</div>
+    <ul><li><span class="todo">[ ]</span></li></ul>
+    <div class="sub">퇴사사유: <span class="todo" style="font-weight:normal">[ ]</span></div>
+  </div>
+
+  <!-- 자기소개서 -->
+  <h2 style="page-break-before:always">자기소개서</h2>
+  <div class="guide">경력직의 경우 현재 지원하고 있는 포지션과 관련되어 업무적 측면에 강점을 둔 자기소개서를 작성하는 것이 좋습니다. 다음의 순으로 기술해주시기 바랍니다.</div>
+
+  <p style="margin:10px 0 2px"><b>- 지원동기 및 자격요건 적합성</b></p>
+  <div class="guide">(회사정보 및 지원포지션의 자격요건 확인 후 본인의 경력과 부합된다고 생각되는 이유를 3~4가지 정도로 분류하여 최대한 어필해주십시오.)</div>
+  <div class="essay">
+    <p>저는 <span class="todo">[N]</span>년간 파트너포탈, 전자계약·입찰, 그룹웨어, SSO 등 기업 핵심 시스템을 운영·개선하며 ‘현업이 겪는 문제를 시스템으로 풀어내는 일’을 해왔습니다. <span class="todo">[지원 회사]</span>의 <span class="todo">[지원 포지션]</span>에 적합하다고 생각하는 이유는 다음과 같습니다.</p>
+    <p><b>1) 운영 경험 기반의 안정성</b> – 장애 로그를 직접 분석해 원인을 찾고, 반복 이슈를 근본 해결하며 서비스 안정성을 높여 왔습니다.</p>
+    <p><b>2) 요구사항부터 테스트까지 전 과정 수행</b> – 요구사항정의서 작성, 화면 컨셉 설계, 테스트 내역서 작성까지 책임지며 현업과 개발 사이의 소통을 체계화했습니다.</p>
+    <p><b>3) 현대적 기술 스택 이해</b> – SmartOps(.NET/React/AWS) 개발환경 구축과 문서화를 수행하며 클라우드 기반 개발 흐름을 익혔습니다.</p>
+    <p><b>4) 문서화·협업 역량</b> – 남이 봐도 이해되는 가이드와 산출물을 남겨 신규 인력의 적응 시간을 줄였습니다. <span class="todo">[추가 어필 포인트]</span></p>
+  </div>
+
+  <p style="margin:12px 0 2px"><b>- 주요 프로젝트 및 경력목표</b></p>
+  <div class="guide">(전공과 경력개발의 유관관계, 경력/특기사항, 전문가적 기질, 업무적 특성, 지원자의 희망업무와 오픈 포지션을 연계한 경력목표)</div>
+  <div class="essay">
+    <p><b>주요 프로젝트</b></p>
+    <ul>
+      <li>파트너포탈 오류 개선 및 서비스부품 반품 로직 구축 <span class="todo">[본인 역할·성과 보완]</span></li>
+      <li>그룹웨어 개선 (차량 인수인계증 사번 추가, 인감관리 메뉴 설계, 모바일 전환 현황 점검)</li>
+      <li>SSO 시스템 유지보수 및 권한 데이터 정비</li>
+      <li>SmartOps 로컬 개발환경 가이드 (백엔드/프론트엔드)</li>
+    </ul>
+    <p><b>경력목표</b><br>운영 중심 역량을 바탕으로 <span class="todo">[예: 시스템 기획/PM, 클라우드 기반 서비스 개발, 운영 자동화]</span> 분야로 역량을 확장하여 <span class="todo">[목표]</span>를 이루고자 합니다.</p>
+  </div>
+
+  <p style="margin:12px 0 2px"><b>- 성격의 장단점</b></p>
+  <div class="guide">(재직했던 조직에서 성격이나 인성부분에 있어 받아왔던 평가, 또는 본인 스스로 어떤 성격과 인성으로 조직 내 융화 및 긍정적 영향을 이끌어왔는지에 대해 기술해주십시오.)</div>
+  <div class="essay">
+    <p><b>[장점]</b></p>
+    <ul>
+      <li><b>꼼꼼한 문제 해결력</b> – 방대한 로그도 끝까지 확인해 원인을 찾아냅니다.</li>
+      <li><b>문서화 습관</b> – 테스트 내역서, 요구사항정의서, 셋업 가이드 등 남이 봐도 이해되는 산출물을 남깁니다.</li>
+      <li><b>소통과 조율</b> – 현업·개발·협력사 간 요구를 정리해 우선순위를 맞춥니다.</li>
+    </ul>
+    <p><b>[단점 및 보완]</b></p>
+    <ul>
+      <li>완성도에 집중하다 보면 속도가 느려질 때가 있어, 최근에는 우선순위·마감 기준을 먼저 합의한 뒤 진행합니다.</li>
+      <li>혼자 해결하려는 경향이 있어, 일정 시간 내 해결되지 않으면 즉시 공유하는 규칙을 두고 있습니다.</li>
+      <li><span class="todo">[본인 실제 단점으로 수정 가능]</span></li>
+    </ul>
+  </div>
+
+  <div class="confirm">지원서상의 모든 기재사항은 사실과 다름이 없음을 확인합니다.</div>
+  <div class="sign">
+    작성일: <span class="todo">[0000]</span>년 <span class="todo">[00]</span>월 <span class="todo">[00]</span>일<br>
+    작성자: <span class="todo">[이름]</span> (서명)
+  </div>
+
+</div>
+</body>
+</html>
